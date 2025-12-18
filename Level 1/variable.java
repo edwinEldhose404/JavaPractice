@@ -35,7 +35,11 @@ class Variable
 
         //Without a third variable
 
-        // x,y = y,x
+        x = x + y;
+        y = x - y;
+        x = x - y;
+
+        System.out.println(x + " " + y);
 
         //Finding average and sum of x,y,z
         int avg = (x+y+q)/3;
