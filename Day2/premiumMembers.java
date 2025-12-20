@@ -1,0 +1,23 @@
+class PremiumMembers 
+{
+	public static void main(String[] args) 
+	{
+		//Premium only
+		boolean premium = true;
+		boolean sale = false;
+		int cartValue = 250;
+		
+		System.out.println(premium==true || (sale==true && cartValue>= 5000) ? "Discounted" : "No discount");
+
+		//No prem but above 5k during sale
+		premium = false;
+		sale = true;
+		cartValue = 6000;
+		System.out.println(premium==true || (sale==true && cartValue>= 5000) ? "Discounted" : "No discount");
+		
+		//No prem and under 5k
+		cartValue = 700;
+		System.out.println(premium==true || (sale==true && cartValue>= 5000) ? "Discounted" : "No discount");
+		
+	}
+}

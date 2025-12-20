@@ -1,0 +1,70 @@
+class OperatorExcercises 
+{
+	public static void main(String[] args) 
+	{
+		
+		// 1. Greater than(>) as checking for non-zeros can allow negative numbers to be accpeted
+		// 2. Lesser than or equal to(<=) 
+		// 3. Greater than or equal to (>=) and 499 returns True
+		// 4. Greater than or equal to (>=) as regular greater than won't allow 2000
+		// 5. 
+		// 6. 
+		// 7. Equal to (==) 
+		// 8. Greater than or equal to (>=) but a regular customer can order a bit above average and this can falsly flag it
+		// 9. Lesser than or equal to(<=)
+		// 10. Lesser than (<)
+		
+		
+		
+		//Char type identifier  start
+		char a = 'a';
+		char b = '4';
+		char c = '&';
+		
+		//Horizontal Line
+		System.out.println("----------------------------------");
+	    
+		//For  a
+		String x = (a>=65  && a<=90)||(a>=97 && a<=122)  ?  (a>=65  && a<=90 ? "Lowercase Letter" : "Uppercase Letter") : ((a>=48 && a<=57) ? "Number" : "Special Character");
+		String y  = (x=="Lowercase Letter" || x=="Uppercase Letter" ? ((a=='a' || a=='e' || a=='i' || a=='o' || a=='u' || a=='A' || a=='E' || a=='I' || a=='O' || a=='U')? "Vowel" : "Consonant" ) : " ");
+		System.out.println(x=="Lowercase Letter" || x=="Uppercase Letter" ? x+" "+y : x);
+		
+		//For 4
+		a = b;
+		x = (a>=65  && a<=90)||(a>=97 && a<=122)  ?  "Letter" : ((a>=48 && a<=57) ? "Number" : "Special Character");
+		y  = (x=="Lowercase Letter" || x=="Uppercase Letter" ? ((a=='a' || a=='e' || a=='i' || a=='o' || a=='u' || a=='A' || a=='E' || a=='I' || a=='O' || a=='U')? "Vowel" : "Consonant" ) : "-");
+		System.out.println(x=="Lowercase Letter" || x=="Uppercase Letter" ? x+" "+y : x);
+		
+		//For  &
+		a = c;
+		x = (a>=65  && a<=90)||(a>=97 && a<=122)  ?  "Letter" : ((a>=48 && a<=57) ? "Number" : "Special Character");
+		y  = (x=="Lowercase Letter" || x=="Uppercase Letter" ? ((a=='a' || a=='e' || a=='i' || a=='o' || a=='u' || a=='A' || a=='E' || a=='I' || a=='O' || a=='U')? "Vowel" : "Consonant" ) : "-");
+		System.out.println(x=="Lowercase Letter" || x=="Uppercase Letter" ? x+" "+y : x);
+		
+		//Horizontal Line
+		System.out.println("----------------------------------");
+		
+		//End
+		
+		//Loan Interest Calculator start
+		
+		double principle = 500000;
+		double interest = 10;
+		int tenure = 5;
+		
+		int months = tenure*12;
+		double deciInterest = interest/100;
+		
+		double totalamt = (principle + (principle*deciInterest)*tenure);
+		double emi = totalamt/months;
+		
+		System.out.println("Emi is : " + emi + " and total amount is " + totalamt + " paid over " + months + " months");
+		
+		//Horizontal Line
+		System.out.println("----------------------------------");
+		
+		//Ed
+		
+		
+	}
+}

@@ -1,0 +1,20 @@
+class onlineOrder 
+{
+	public static void main(String[] args) 
+	{
+		boolean payment = true;
+		boolean stock = true;
+		boolean backorder = false;
+		
+		System.out.println((payment == true && (stock==true||backorder==true)) ? "Success" : "Failed");
+	
+		payment = false;
+		System.out.println((payment == true && (stock==true||backorder==true)) ? "Success" : "Failed");
+		
+		payment =true;
+		stock = false;
+		backorder = true;
+		System.out.println((payment == true && (stock==true||backorder==true)) ? "Success" : "Failed");
+		
+	}
+}

@@ -1,0 +1,24 @@
+class EmployeeCheckIn 
+{
+	public static void main(String[] args) 
+	{
+		boolean id = true;
+		boolean permanEmployee = true;
+		boolean managerApproval = false;
+		
+		System.out.println(id==true ? (permanEmployee == true || managerApproval == false ? "Allowed" : "Denied") : "Denied");
+		
+		id = false;
+		System.out.println(id==true ? (permanEmployee == true || managerApproval == false ? "Allowed" : "Denied") : "Denied");
+
+		id = true;
+		permanEmployee = false;
+		managerApproval = true;
+		System.out.println(id==true ? (permanEmployee == true || managerApproval == false ? "Allowed" : "Denied") : "Denied");
+
+		permanEmployee = false;
+		managerApproval = false;
+		System.out.println(id==true ? (permanEmployee == true || managerApproval == false ? "Allowed" : "Denied") : "Denied");
+
+	}
+}

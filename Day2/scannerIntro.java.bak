@@ -1,0 +1,23 @@
+
+import java.util.Scanner;
+
+class ScannerIntro 
+{
+	public static void main(String[] args) 
+	{
+		//Steps
+		//import java.util.Scanner
+		Scanner scanner = new Scanner(System.in);
+		
+		//In-built methods of scanner
+		//nextByte(),nextShort(),nextInt()...,next()[for just one word]
+		//nextLine()[for a line of words],next().charAt(*index)
+		//Don't use the last three in conjunction as it causes problems with input
+		
+		int input = scanner.nextInt();
+		System.out.println(input);
+		scanner.nextLine();
+		String input2 = scanner.nextLine();
+		System.out.println(input2);
+	}
+}

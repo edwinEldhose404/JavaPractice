@@ -1,0 +1,14 @@
+class movieTicket 
+{
+	public static void main(String[] args) 
+	{
+		boolean seats = true;
+		boolean member = false;
+		boolean promo = false;
+		
+		System.out.println(seats && (member || promo)? "Allowed" : "Not allowed");
+		
+		member = true;
+		System.out.println(seats && (member || promo)? "Allowed" : "Not allowed");
+	}
+}

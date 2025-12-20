@@ -1,0 +1,34 @@
+class TypecastingIntro 
+{
+	public static void main(String[] args) 
+	{
+		//Two types
+			// Primitive
+				//Primitive is less recommended and usually deals with datatypes
+				//Converting from one primitive data type to another
+				//Two types
+				
+					//Widening(implicit)
+						//Implicitly handled by the compiler(No data loss)
+						//Goes from smaller datatype to larger
+						//Byte->Short&char->Int->long->float->double
+							//Byte to char not possible IMPLICITLY(only char to int,etc)
+						//Reverse might cause possible lossy convertion error
+						int i1 = 150;
+						long a = i1;
+						System.out.println(a);
+						
+					//Narrowing(explicit)
+						//Converting larger datatype to smaller
+						//double-float-long-int-short&char-byte
+						// Smaller d.t. var = ( )larger d.t. var;
+						int i2 = 1500;
+						byte b = (byte)i2;
+						System.out.println(b);
+						
+			//Non-primitive
+				//Non-primitive typecasting deals with classes
+		
+		
+	}
+}

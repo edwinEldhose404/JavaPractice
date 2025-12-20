@@ -34,7 +34,6 @@ class Variable
         System.out.println(x + " " + y);
 
         //Without a third variable
-
         x = x + y;
         y = x - y;
         x = x - y;

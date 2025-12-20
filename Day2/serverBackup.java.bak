@@ -1,0 +1,14 @@
+class serverBackup 
+{
+	public static void main(String[] args) 
+	{
+		int hour = 12;
+		boolean lowload = true;
+		boolean maintenence = false;
+		
+		System.out.println(hour==12 && (lowload||maintenence) ? "Yes" : "No");
+		
+		lowload == false;
+		System.out.println(hour==12 && (lowload||maintenence) ? "Yes" : "No");
+	}
+}

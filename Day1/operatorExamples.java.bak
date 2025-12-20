@@ -1,0 +1,21 @@
+class OperatorExamples 
+{
+	public static void main(String[] args) 
+	{
+		//check for vowels
+		char a = 'a';
+		
+		String a1 = (a == 'a' || a == 'e' || a == 'i' || a == 'o' ||a == 'u' || a == 'A' || a == 'E' || a == 'I' || a == 'O' || a == 'U' ? "True" : "False");
+		System.out.println(a1);//True
+		
+		a = 'D';
+		
+		a1 = (a == 'a' || a == 'e' || a == 'i' || a == 'o' ||a == 'u' || a == 'A' || a == 'E' || a == 'I' || a == 'O' || a == 'U' ? "True" : "False");
+		System.out.println(a1);//False
+		
+		//check for number types
+		int b = 1;
+		String b1 = (b>=0) ? (b==0 ? "Neutral" : "Positive") : "Negative";
+		System.out.println(b1);
+	}
+}

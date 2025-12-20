@@ -1,0 +1,20 @@
+class ageChecker 
+{
+	public static void main(String[] args) 
+	{
+		int age = 18;
+		boolean ban = false;
+		
+		//18 and not banned
+		System.out.println(age>=18 && ban == false ? "Allowed" : "Denied");
+		
+		//18 and banned
+		ban = true;
+		System.out.println(age>=18 && ban == false ? "Allowed" : "Denied");
+		
+		//13 and not banned
+		age = 13;
+		ban = false;
+		System.out.println(age>=18 && ban == false ? "Allowed" : "Denied");
+	}
+}
