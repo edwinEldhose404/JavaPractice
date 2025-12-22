@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+class shoppingCart 
+{
+	public static void main(String[] args) 
+	{
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Enter cart items(leave blank if empty");
+		String cart = scan.nextLine();
+		
+		System.out.println("Enter delivery address(leave blank if empty");
+		String delivery = scan.nextLine();
+		
+		if (cart=="")
+		{
+			System.out.println("Invalid cart");
+		}
+		else if(delivery=="")
+		{
+			System.out.println("Invalid address");
+		}
+		else
+		{
+			System.out.println("Order successful");
+		}
+		
+	}
+}

@@ -1,22 +1,19 @@
+import java.util.Scanner;
+
 class AccountStatus 
 {
 	public static void main(String[] args) 
 	{
-		double balance = 40000;
-		boolean flagged = false;
+		Scanner scan = new Scanner(System.in);
 		
-		if (balance>=10000 && flagged == false)
-		{
-			System.out.println("Active");
-		} else if (balance<10000)
-		{
-			System.out.println("Low Balance");
-		} else 
-		{
-			System.out.println("Flagged");
-		}
+		System.out.println("Balance:");
+		int balance = scan.nextInt();
+		scan.nextLine();
 		
-		flagged = true;
+		System.out.println("Flagged? (true/false)");
+		boolean flagged = scan.nextBoolean();
+		scan.nextLine();
+		
 		if (balance>=10000 && flagged == false)
 		{
 			System.out.println("Active");

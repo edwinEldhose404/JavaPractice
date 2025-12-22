@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 class  ControlStatementsIntro
 {
 	public static void main(String[] args) 
@@ -12,12 +14,14 @@ class  ControlStatementsIntro
 				//Do while, while, for, for each, nested loop
 			//Jumping statement
 				//continue, break, return
-				
+		
+		Scanner scanner = new Scanner(System.in);
 		boolean avalDriver = true;
 		boolean service = true;
-		boolean payment = true;
+		System.out.println("What is your payment method? (Cash,UPI,Card(Credit or Debit)): ");
+		String payment = scanner.nextLine(); 
 		
-		if (avalDriver && service && payment)
+		if ((avalDriver && service) && (payment=="Cash",payment=="UPI",payment=="Card"))
 		{
 			System.out.println("Your cab will arrive shortly");
 		}else{
@@ -26,7 +30,7 @@ class  ControlStatementsIntro
 		
 		avalDriver = false;
 		
-		if (avalDriver && service && payment)
+		if ((avalDriver && service) && payment!="")
 		{
 			System.out.println("Your cab will arrive shortly");
 		}else{
