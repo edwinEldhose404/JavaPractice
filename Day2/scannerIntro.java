@@ -20,7 +20,11 @@ class ScannerIntro
 		scanner.nextLine();//Dummy line
 		//Without this line, the below line will automativally return 
 		//" Cherry Drive" without asking for input
+		
 		String input2 = scanner.nextLine();
 		System.out.println(input2);
+		
+		//To prevent resource leaks which are caused by classes:
+		scanner.close();
 	}
 }

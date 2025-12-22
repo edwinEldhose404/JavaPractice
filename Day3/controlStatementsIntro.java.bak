@@ -1,0 +1,36 @@
+class  ControlStatementsIntro
+{
+	public static void main(String[] args) 
+	{
+		//Types
+			//Decision Making Statements
+				//If, if else, if else ladder, switch and nested if
+					//Switch(takes a variable), case(takes only expression/values) and default
+						//Default block is optional and can contain anything(even switch)
+						//Case cannot accept bool, float, double,and long datatypes
+			//Looping statement
+				//Do while, while, for, for each, nested loop
+			//Jumping statement
+				//continue, break, return
+				
+		boolean avalDriver = true;
+		boolean service = true;
+		boolean payment = true;
+		
+		if (avalDriver && service && payment)
+		{
+			System.out.println("Your cab will arrive shortly");
+		}else{
+			System.out.println("Not available");
+		}
+		
+		boolean avalDriver = false;
+		
+		if (avalDriver && service && payment)
+		{
+			System.out.println("Your cab will arrive shortly");
+		}else{
+			System.out.println("Not available");
+		}
+	}
+}

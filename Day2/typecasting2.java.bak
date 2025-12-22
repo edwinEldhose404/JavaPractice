@@ -1,0 +1,12 @@
+import java.util.Scanner;
+
+class Typecasting2 
+{
+	public static void main(String[] args) 
+	{
+		Scanner scanner = new Scanner(System.in);
+		
+		int x = (int)(scanner.nextByte());
+		System.out.println(x);
+	}
+}
