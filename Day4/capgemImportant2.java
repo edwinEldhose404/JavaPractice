@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+class capgemImportant2 
+{
+	public static void main(String[] args) 
+	{
+		
+		//Enter age, Gender (M or F) and then using following rules print their place of
+		//service
+		//if employee is female, then she will work only in urban areas.
+		//if male and between 20 and 40, will do anywhere
+		//if employee is male and age is in between 40 to 60 then he will work 
+		//in urban Case areas only.
+		//if any other input, print error
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter age : ");
+		int age = sc.nextInt();
+		sc.nextLine();
+		System.out.println("Enter gender M(0) & F(1): ");
+		int gender = sc.nextInt();
+		
+		if (gender == 1)
+		{
+			System.out.println("Urban areas only");
+		} 
+		else if (gender == 0)
+		{
+			if (age>=20 && age<=40)
+			{
+				System.out.println("Anywhere");
+			}
+			else if (age>40 && age<=60)
+			{
+				System.out.println("Urban areas only");
+			}
+			else
+			{
+				System.out.println(age);
+				System.out.println("Invalid Age");
+			}
+		}
+		else
+		{
+			System.out.println(gender);
+			System.out.println("Invalid gender");
+		}
+		
+	}
+}

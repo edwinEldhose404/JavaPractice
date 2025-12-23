@@ -18,10 +18,10 @@ class  ControlStatementsIntro
 		Scanner scanner = new Scanner(System.in);
 		boolean avalDriver = true;
 		boolean service = true;
-		System.out.println("What is your payment method? (leave blank for none): ");
+		System.out.println("What is your payment method? (Cash,UPI,Card(Credit or Debit)): ");
 		String payment = scanner.nextLine(); 
 		
-		if ((avalDriver && service) && payment!="")
+		if ((avalDriver && service) && (payment=="Cash",payment=="UPI",payment=="Card"))
 		{
 			System.out.println("Your cab will arrive shortly");
 		}else{
