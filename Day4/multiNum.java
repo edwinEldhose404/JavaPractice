@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+class multiNum 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		
+		long oddsum = 1;
+		long evensum = 1;
+		
+		for (int i = a ; i<b;i++)
+		{
+			if (i%2==0)
+			{
+				evensum*=i;
+			}
+			else
+			{
+				oddsum*=i;
+			}
+		}
+		System.out.println(evensum + " " + oddsum);
+	}
+}

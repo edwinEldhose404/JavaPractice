@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+class alphaToNum 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		char num = sc.nextChar();
+		System.out.println(num);
+		
+	}
+}

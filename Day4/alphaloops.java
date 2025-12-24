@@ -1,0 +1,21 @@
+class alphaLoops 
+{
+	public static void main(String[] args) 
+	{
+		//"A" = 65 & "Z" = 90
+		double productodd = 1;
+		
+		for (char i = 'A';i<='Z' ;i++ )
+		{
+			if (i%2==0)
+			{
+				System.out.println(i);
+			}
+			else
+			{
+				productodd *= i;
+			}
+		}
+		System.out.println(productodd);
+	}
+}
