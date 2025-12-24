@@ -22,6 +22,7 @@ class shapes
 			//Call shape func.
 			switch (option)
 			{
+				
 			case 1:
 				cont = rectangle();
 				break;

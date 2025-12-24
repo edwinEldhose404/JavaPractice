@@ -2,24 +2,24 @@ import java.util.Scanner;
 
 class shapes 
 {
-	
 	static Scanner sc = new Scanner(System.in);
 	
 	public static void main(String[] args) 
 	{
 		//init cont which is used for checking continuation
 		int cont = 1;
-		//Options
+		
+		//Loop until cont == 0
 		while (cont!=0)
 		{
+			
+			//option
 			System.out.println("Pick your shape : 1.Rectangle, 2.Circle, 3.Trapeoid");
 			
 			int option = sc.nextInt();
 			sc.nextLine();
 			
-			
-			
-			//Call shape func. and check if to be continued
+			//Call shape func.
 			switch (option)
 			{
 			case 1:
