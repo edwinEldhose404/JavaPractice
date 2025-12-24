@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+class methodsIntro 
+{
+	public static void main(String[] args) 
+	{
+		//Syntax
+			//AccessModifier Modifier WrittenType MethodName(formal arguments)
+			//Structure
+				//Method declaration
+					//Method implementation/body
+			//Access Modifiers - private, public, protected , default
+			// Modifiers - static, final, synchronized, volatile, transcient
+			//User-defined methods
+				//Parameterized & Non-parameterized
+				//Arguments in inside parameterised methods can contain:
+					//Variables
+					//Inbuilt class obj.
+					//User-def. class obj
+		System.out.println("Start");
+		demo1();
+		System.out.println("End");
+	}
+	
+	public static void demo1()
+	{
+		System.out.println(demo2(" but called from Demo1()"));
+		
+	}
+	
+	public static String demo2(String x)
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number to countdown : ");
+		int num1 = sc.nextInt();
+		return ("Demo2() method"+x+demo3(num1));
+	}
+	
+	public static String demo3(int a)
+	{
+		System.out.println(a);
+		
+		if (a>0)
+		{
+			
+			demo3(a-1);
+		}
+		
+		return " and using Demo3()";
+	}
+}

@@ -1,0 +1,79 @@
+import java.util.Scanner;
+
+class shapes 
+{
+	
+	static Scanner sc = new Scanner(System.in);
+	
+	public static void main(String[] args) 
+	{
+		//init cont which is used for checking continuation
+		int cont = 1;
+		//Options
+		while (cont!=0)
+		{
+			System.out.println("Pick your shape : 1.Rectangle, 2.Circle, 3.Trapeoid");
+			
+			int option = sc.nextInt();
+			sc.nextLine();
+			
+			
+			
+			//Call shape func. and check if to be continued
+			switch (option)
+			{
+			case 1:
+				cont = rectangle();
+				break;
+			case 2:
+				cont = circle();
+				break;
+			case 3:
+				cont = trapezoid();
+				break;
+			}
+		}
+	}
+	
+	public static int rectangle()
+	{
+		System.out.println("Enter length");
+		int l = sc.nextInt();
+		System.out.println("Enter width");
+		int w = sc.nextInt();
+		System.out.println("Area is : "+(l*w));
+		
+		System.out.println("Continue? 1/0");
+		int c = sc.nextInt();
+		return c;
+		
+	}
+	
+	public static int circle()
+	{
+		System.out.println("Enter radius");
+		int r = sc.nextInt();
+		System.out.println("Area is : "+(3.14*(r*r)));
+		
+		System.out.println("Continue? 1/0");
+		int c = sc.nextInt();
+		return c;
+	}
+	
+	public static int trapezoid()
+	{
+		System.out.println("Enter length1");
+		int l1 = sc.nextInt();
+		System.out.println("Enter length2");
+		int l2 = sc.nextInt();
+		System.out.println("Enter width");
+		int w = sc.nextInt();
+		
+		//average of main 2 lengths and multiply with width
+		System.out.println("Area is : "+(((l1+l2)/2)*w));
+		
+		System.out.println("Continue? 1/0");
+		int c = sc.nextInt();
+		return c;
+	}
+}
