@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+class shopDisc 
+{
+	public static void main(String[] args) 
+	{
+		//Online Shopping Discount Engine 
+		//Write a method that takes purchase Amount and customer 
+		//Type (Regular / Premium) and returns the final payable amount 
+		//after applying discounts.
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter amount : ");
+		double amt = sc.nextDouble();
+		
+		System.out.println("Enter customer type 0/1(Standard/Premium)");
+		int ctype = sc.nextInt();
+		
+		System.out.println("Your final amount is" + billCalc(amt,ctype));
+		
+	}
+	
+	public static double billCalc(double amt,int ctype)
+	{
+		if (ctype == 0)
+		{
+			return amt;
+		} 
+		else
+		{
+			return amt*0.90;
+		}
+	}
+}

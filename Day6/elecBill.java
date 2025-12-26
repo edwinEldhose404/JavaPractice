@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+class  elecBill
+{
+	public static void main(String[] args) 
+	{
+		//Electricity Bill Calculator 
+		//Create a parameterized method that 
+		//accepts units Consumed and calculates the bill based on slab rates. 
+		//Think: how will you handle boundary values?
+		
+			
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter amount of units used");
+		double units = sc.nextDouble();
+		System.out.println("Your bill is : "+elecCalc(units));
+		
+		
+	}
+	
+	public static double elecCalc(double units)
+	{
+		double boundary = 20.2;
+		
+		if (units>boundary)
+		{
+			System.out.println("Warning value out of boundary");
+		}
+		
+		return units*3.38;
+	}
+}

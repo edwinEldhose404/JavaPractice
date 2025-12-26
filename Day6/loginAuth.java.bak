@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+class loginAuth 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Username:");
+		String user = sc.next();
+		sc.nextLine();
+		
+		System.out.println("Password:");
+		String pass = sc.next();
+		
+		verify(user,pass);
+	}
+	
+	public static void verify(String user, String pass)
+	{
+		String u1 = "user";
+		String p1 = "pass";
+			
+		String u2 = "user";
+		String p2 = "pass";
+		
+		System.out.println(user + " " + pass);
+		
+		if ((user.equals(u1) && pass.equals(p1))||(user.equals(u2) && pass.equals(p2))
+		{
+			System.out.println("Success");
+		}
+		else
+		{
+			System.out.println("Fail");
+		}
+	}
+}
