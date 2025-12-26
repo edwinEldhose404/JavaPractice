@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+class  loanChecker
+{
+	public static void main(String[] args) 
+	{
+		//Loan Eligibility Checker 
+		//Design a method that accepts monthly Income, credit Score, and 
+		//loan Amount and returns eligibility status
+		
+		Scanner sc = new Scanner(System.in);
+		boolean cont = true;
+		
+		while (cont)
+		{
+			System.out.println("Enter per annum income : ");
+			double inc = sc.nextDouble();
+			
+			System.out.println("Enter credit score : ");
+			double cs = sc.nextDouble();
+			
+			System.out.println("Enter loan amount : ");
+			double loanAmt = sc.nextDouble();
+			
+			if (checker(inc,cs,loanAmt)==0)
+			{
+				System.out.println("Not eligible");
+			}
+			else
+			{
+				System.out.println("Eligible");
+			}
+			
+			System.out.println("Continue? 1/0");
+			int check = sc.nextInt();
+			if (check!=1)
+			{
+				cont = false;
+			}
+		}
+	}
+	
+	public static int checker(double inc, double cs, double loanAmt)
+	{
+		double modifier = (cs*1.125)/1000;
+		
+		if ((loanAmt>((inc*3)*modifier)))
+		{
+			return 0;
+		}
+		else
+		{
+			return 1;
+		}
+	}
+}

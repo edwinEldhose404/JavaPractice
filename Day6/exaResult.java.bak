@@ -1,0 +1,58 @@
+import java.util.Scanner;
+
+class  examResult
+{
+	public static void main(String[] args) 
+	{
+		//Exam Result Analyzer 
+		//Create a method that accepts marks of three subiects as parameters 
+		//and returns the grade. The calling method should decide whether the student is eligible 
+		//for placement training.
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter marks : ");
+		double mark1 = sc.nextDouble();
+		
+		System.out.println("Enter marks : ");
+		double mark2 = sc.nextDouble();
+		
+		System.out.println("Enter marks : ");
+		double mark3 = sc.nextDouble();
+		
+		if (grader(mark1,marks2,marks3) != "F")
+		{
+			System.out.println("Allowed for placement");
+		}
+		else
+		{
+			System.out.println("Debarred");
+		}
+	}
+	
+	public static String grader(double m1,double m2,double m3)
+	{
+		double avg = (m1+m2+m3)/3;
+		
+		if (avg>90)
+		{
+			return "A";
+		}
+		else if (avg>80)
+		{
+			return "B";
+		}
+		else if (avg>70)
+		{
+			return "C";
+		}
+		else if (avg>60)
+		{
+			return "C";
+		}
+		else
+		{
+			return "F";
+		}
+	}
+}
