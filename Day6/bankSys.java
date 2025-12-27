@@ -1,0 +1,78 @@
+import java.util.Scanner;
+
+class bankSys 
+{
+	public static void main(String[] args) 
+	{
+		int opt = 0;
+		double temp =0;
+		double bal = 0;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("--------------------------------------------------");
+		
+		while (true)
+		{
+			System.out.println("Pick your option : ");
+			System.out.println("1.Deposit");
+			System.out.println("2.Withdraw");
+			System.out.println("3.Display");
+			System.out.println("4.Exit");
+			System.out.println("");
+			
+			opt = sc.nextInt();
+			
+			switch (opt)
+			{
+			case 1:
+				display(bal);
+				System.out.println("Enter amount to deposit : ");
+				temp = sc.nextDouble();
+				bal = deposit(temp,bal);
+				break;
+			
+			case 2:
+				display(bal);
+				System.out.println("Enter amount to withdraw : ");
+				temp = sc.nextDouble();
+				
+				if (temp>bal)
+				{
+					System.out.println("Invalid amount");
+					break;-
+				}
+				bal = withdraw(temp,bal);
+				break;
+			
+			case 3:
+				display(bal);
+				break;
+			
+			case 4:
+				exit();
+				break;
+			}
+			System.out.println("--------------------------------------------------");
+		}
+	}
+	
+	public static double deposit (double x,double bal)
+	{
+		return x + bal;
+	}
+	
+	public static double withdraw (double x,double bal)
+	{
+		System.out.println("Your balance is : " + bal);
+		return bal-x ;
+	}
+	
+	public static void display (double bal)
+	{
+		System.out.println("Your balance is : " + bal);
+	}
+	
+	public static void exit ()
+	{
+		System.exit(0);
+	}
+}

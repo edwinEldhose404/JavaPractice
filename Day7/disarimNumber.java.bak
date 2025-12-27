@@ -1,0 +1,65 @@
+import java.util.Scanner;
+
+class disariumNumber 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		int x = sc.nextInt();
+		numCalc(x);
+	}
+	
+	public static void numCalc(int n)
+	{
+			
+		int sum=0;
+		int temp = 0;
+		int innum = 0;
+		int expon =0;
+		int digit =0;
+		
+		//iterate between 0 to n
+		for (int i = 1;i<=n;i++)
+		{
+			innum = i;
+			sum = 0;
+			if (i>99)
+			{
+				digit = 3;
+			}else if (i>9)
+			{
+				digit = 2:
+			}else{
+				digit =1;	
+			}
+			for (int j = digit;j>=1 ;j-- )
+			{
+				expon=1;
+				temp = innum%10;
+				for (int h = 1;h<=j ;h++ )
+				{
+					expon*=temp;
+				}
+				sum += expon;
+				if (innum<10)
+				{
+					break;
+				}
+				innum -= temp;
+				innum /= 10;
+			}
+			
+			if (sum==i)
+			{
+				System.out.println(i);
+			} 
+			//else
+			//{
+				//System.out.println(sum + " - " + i);
+			//}
+		}
+			
+			
+	}
+}
