@@ -1,0 +1,61 @@
+public class productSales{
+    static int[][] sales = {
+        {120, 80, 150, 90, 200, 75, 110},   // Product 1 sales for 7 days
+        {100, 95, 130, 85, 170, 80, 120},   // Product 2 sales for 7 days
+        {90,  70, 110, 95, 140, 60, 100}    // Product 3 sales for 7 days
+        };
+
+    public static void main(String[] args){
+        
+
+        int[] temp = {};
+
+        float[] perDay = new float[7];
+        int[] highDay = new int[3];
+        
+        int highest = 0;
+        int[] hAddress = new int[2];
+        int lowest = 100;
+        int[] lAddress = new int[2];
+
+        for (int i=0;i<sales.length;i++){
+            temp = sales[i];
+            float perProd = 0;
+            for (int j = 0;j<temp.length;j++){
+                perProd += temp[j];
+                perDay[j] = perDay[j]+temp[j];
+
+                if (temp[j]>highest) {
+                    highest = temp[j];
+                    hAddress[0] = i+1;
+                    hAddress[1] = j+1;
+                }
+                if (temp[j]<lowest){
+                    lowest = temp[j];
+                    lAddress[0] = i+1;
+                    lAddress[1] = j+1;
+                }
+
+                if (temp[j]>=100){
+                    highDay[i]+=1;
+                }
+            }
+            System.out.println("Average sales for Product "+(i+1)+":"+ String.format("%.2f",perProd/7));
+        }
+
+        System.out.println();
+        for (int k=0; k<perDay.length;k++){
+            System.out.println("Average sales for Day "+(k+1)+":"+ String.format("%.2f",(perDay[k]/sales.length)));
+        }
+
+        System.out.println();
+        System.out.println("Highest Sale: "+(highest)+"(Product "+ hAddress[0] + ", Day "+hAddress[1]+")");
+        System.out.println("Lowest Sale: "+(lowest)+"(Product "+ lAddress[0] + ", Day "+lAddress[1]+")");
+        
+        System.out.println();
+        for (int l=0; l<highDay.length;l++){
+            System.out.println("Product "+(l+1)+" high sales days (>100): "+ highDay[l]);
+        }
+    }
+
+}
