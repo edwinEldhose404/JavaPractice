@@ -3,7 +3,7 @@ package Day10;
 public class Abstraction {
     //Abstract class
         //abstract class <class_name>{
-        //abstract <AM> <returnType> method(<formal_args>);
+            //abstract <AM> <returnType> <method_name>(<formal_args>);
         // }
             //"abstract" and <AM> can be interchanged
 
@@ -17,5 +17,16 @@ public class Abstraction {
         //Concrete classes are required to implement the methods of the abstract classes 
         //that it inherits from
 
-        
+    //Interface class
+        //100% abstraction and allows multiple inheritance
+        //Syntax
+            //class <class_name> implements <interface_name>{
+                //<AM> <return_type> <method_nam>(<formal_args>);
+            //}
+
+        //If interface is a subclass of interface, USE EXTENDS
+        //Multiple inheritance interface syntax:
+            //interface <name1> extends <name2>, <name3>;
+
+        //EXTENDS INHERITS BEHAVIOUR WHILE INTERFACE PROVIDES BEHAVIOUR
 }
